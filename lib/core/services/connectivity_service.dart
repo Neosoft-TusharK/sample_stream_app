@@ -17,9 +17,6 @@ class ConnectivityService {
     InternetConnection().onStatusChange.listen((InternetStatus result) {
       _controller.add(result == InternetStatus.connected);
     });
-    InternetConnection().onStatusChange.listen((InternetStatus result) {
-      _controller.add(result == InternetStatus.connected);
-    });
   }
 
   Stream<bool> get connectivityStream => _controller.stream;
